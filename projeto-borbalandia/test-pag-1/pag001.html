@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borbalândia</title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon/icone-abobora-pq.webp" type="image/x-icon">
+    <!--Celulares css-->
+    <link rel="stylesheet" href="estilos/celular.css">
+    <!--Icones-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    
+    <main>
+        <section id="tela" class="conteudo-tela" style="display: block">
+
+            <!--Cabeçalho-->
+            <div id="cab">
+                <h1>Borbalândia</h1>
+                <p>Faça a maior plantação de aboboras.</p>
+            </div>
+
+            <!--Menu-->
+
+            <menu id="mn1">
+
+                <div id="menu">
+
+                    <div id="shop" onclick="toggleMenu('tela-shop')">
+                        <span id="carr" class="material-symbols-outlined">
+                            shopping_cart
+                            </span>
+                    </div>
+                    <div id="upgrade" onclick="toggleMenu('tela-up')">
+                        <span id="up" class="material-symbols-outlined">
+                            upgrade
+                            </span>
+                    </div>
+
+
+                </div>
+
+            </menu>
+
+            <!--Icone-Moedas-->
+
+            <div class="icone-moeda1">
+
+                
+
+            </div>
+
+            <!--Moedas-->
+
+            <div class="moedas1" id="moedas1-count">
+
+                <p>0</p>
+
+            </div>
+
+            <!--Icone-Moedas-->
+
+            <div class="icone-moeda2">
+
+                
+                
+            </div>
+
+            <!--Moedas-->
+
+            <div class="moedas2">
+                
+                <p>0</p>
+
+            </div>
+
+            <!--Imagem-->
+
+            <div id="imagem">
+
+                
+
+            </div>
+
+        </section>
+
+        <!--Shop-->
+
+        <section id="tela-shop" class="conteudo-tela" style="display: none">
+
+            <div id="cab2">
+
+                <h1>SHOP</h1>
+                <p>Compre suas melhorias!</p>
+                
+            </div>
+
+            <menu id="mn2">
+
+                <div id="menu2">
+
+                    <div id="home" onclick="toggleMenu('tela')">
+                        <span id="carr2" class="material-symbols-outlined">
+                            home
+                            </span>
+                    </div>
+                    <div id="upgrade">
+                        <span id="up2" class="material-symbols-outlined">
+                            upgrade
+                            </span>
+                    </div>
+
+                </div>
+
+
+        </section>
+
+        <!--Upgrades-->
+
+        <section id="tela-up" class="conteudo-tela" style="display: none">
+
+            <div id="cab3">
+
+                <h1>UPGRADES</h1>
+                <p>Compre suas melhorias!</p>
+                
+            </div>
+
+            <menu id="mn3">
+
+                <div id="menu3">
+
+                    <div id="home" onclick="toggleMenu('tela')">
+                        <span id="carr3" class="material-symbols-outlined">
+                            home
+                            </span>
+                    </div>
+                    <div id="upgrade">
+                        <span id="up3" class="material-symbols-outlined">
+                            shopping_cart
+                            </span>
+                    </div>
+
+                </div>
+
+
+        </section>
+
+    </main>
+    
+    <script>
+        // seleciona a imagem e o elemento moedas1
+        const image = document.querySelector('#imagem');
+        const countElement = document.querySelector('#moedas1-count');
+    
+        // adiciona uum evento para os cliques na imagem
+        image.addEventListener('click', () => {
+            // pega o valor de moedas1
+            let count = parseInt(countElement.textContent);
+            // aumenta o valor em 1
+            count++;
+    
+            // atualiza o valor
+            countElement.textContent = count;
+            
+        });
+    </script>
+
+    <script>
+
+function toggleMenu(targetId) {
+    // Select the main-screen and shop-screen sections
+    let mainScreen = document.querySelectorAll('.conteudo-tela');
+
+    // Change the display of the content-screen elements
+    mainScreen.forEach((item) => {
+        if (item.id === targetId) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+    </script>
+
+</body>
+</html>
