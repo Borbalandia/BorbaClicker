@@ -23,7 +23,7 @@
             <!--Cabeçalho-->
 
             <div id="cab">
-                <h1>Borbalândia</h1>
+                <h1>BORBALÂNDIA</h1>
                 <p>Faça a maior plantação de aboboras.</p>
             </div>
 
@@ -190,9 +190,19 @@
         // seleciona a imagem e o elemento moedas1
         const image = document.querySelector('#imagem');
         const countElement = document.querySelector('#moedas1-count');
-    
+        let timeoutHandle;
+        let podeclicar = true;
+
         // adiciona uum evento para os cliques na imagem
         image.addEventListener('click', () => {
+            // não dá pra clicar se podeclicar = false
+            if (!podeclicar) {
+                return;
+            }
+            if (timeoutHandle) {
+                clearTimeout(timeoutHandle); // reseta o timer se existir algum
+            }
+
             // pega o valor de moedas1
             let count = parseInt(countElement.textContent);
             // aumenta o valor em 1
@@ -201,6 +211,12 @@
             // atualiza o valor
             countElement.textContent = count;
             
+            // Set up a delay to allow a 0.05-second window for another click event
+            podeclicar = false
+            timeoutHandle = setTimeout(() => {
+                podeclicar = true;
+                timeoutHandle = null; // reseta o timer
+            }, 50);
         });
 
         //#endregion script clicker
@@ -208,10 +224,10 @@
         //#region script menu
 
 function toggleMenu(targetId) {
-    // Select the main-screen and shop-screen sections
+    // seleciona a section da tela principal
     let mainScreen = document.querySelectorAll('.conteudo-tela');
 
-    // Change the display of the content-screen elements
+    // muda o display dos elementos
     mainScreen.forEach((item) => {
         if (item.id === targetId) {
             item.style.display = 'block';

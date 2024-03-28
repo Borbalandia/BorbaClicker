@@ -251,11 +251,6 @@ div.icone-moeda2{
     transform: translateY(65px);
 }
 
-div.icone-moeda2:hover {
-    /*cursor do mouse*/
-    cursor: text;
-}
-
 div.moedas2 {
     /*caixa*/
     display: block;
