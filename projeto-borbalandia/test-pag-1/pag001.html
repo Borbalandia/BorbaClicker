@@ -15,31 +15,40 @@
 <body>
     
     <main>
-        <section id="tela" class="conteudo-tela" style="display: block">
 
+        <!--#region Home-->
+
+        <section id="tela" class="conteudo-tela" style="display: block">
+            
             <!--Cabeçalho-->
+
             <div id="cab">
                 <h1>Borbalândia</h1>
                 <p>Faça a maior plantação de aboboras.</p>
             </div>
 
-            <!--Menu-->
+        <!--Menu-->
 
-            <menu id="mn1">
-
+            <menu id="mn">
                 <div id="menu">
-
+                    <!--home-->
+                    <div id="home" onclick="toggleMenu('tela')">
+                        <span id="hmS" class="material-symbols-outlined">
+                            home
+                            </span>
+                    </div>
+                    <!--shop-->
                     <div id="shop" onclick="toggleMenu('tela-shop')">
                         <span id="carr" class="material-symbols-outlined">
                             shopping_cart
                             </span>
                     </div>
+                    <!--upgrade-->
                     <div id="upgrade" onclick="toggleMenu('tela-up')">
                         <span id="up" class="material-symbols-outlined">
                             upgrade
                             </span>
                     </div>
-
 
                 </div>
 
@@ -86,8 +95,10 @@
             </div>
 
         </section>
+        
+        <!--#endregion Home-->
 
-        <!--Shop-->
+        <!--#region Shop-->
 
         <section id="tela-shop" class="conteudo-tela" style="display: none">
 
@@ -98,27 +109,38 @@
                 
             </div>
 
-            <menu id="mn2">
+            <!--Menu-->
 
-                <div id="menu2">
-
+            <menu id="mn">
+                <div id="menu">
+                    <!--home-->
                     <div id="home" onclick="toggleMenu('tela')">
-                        <span id="carr2" class="material-symbols-outlined">
+                        <span id="hm" class="material-symbols-outlined">
                             home
                             </span>
                     </div>
-                    <div id="upgrade">
-                        <span id="up2" class="material-symbols-outlined">
+                    <!--shop-->
+                    <div id="shop" onclick="toggleMenu('tela-shop')">
+                        <span id="carrS" class="material-symbols-outlined">
+                            shopping_cart
+                            </span>
+                    </div>
+                    <!--upgrade-->
+                    <div id="upgrade" onclick="toggleMenu('tela-up')">
+                        <span id="up" class="material-symbols-outlined">
                             upgrade
                             </span>
                     </div>
 
                 </div>
 
+            </menu>
 
         </section>
 
-        <!--Upgrades-->
+        <!--#endregion Shop-->
+
+        <!--#region Upgrades-->
 
         <section id="tela-up" class="conteudo-tela" style="display: none">
 
@@ -129,29 +151,42 @@
                 
             </div>
 
-            <menu id="mn3">
+            <!--Menu-->
 
-                <div id="menu3">
-
+            <menu id="mn">
+                <div id="menu">
+                    <!--home-->
                     <div id="home" onclick="toggleMenu('tela')">
-                        <span id="carr3" class="material-symbols-outlined">
+                        <span id="hm" class="material-symbols-outlined">
                             home
                             </span>
                     </div>
-                    <div id="upgrade">
-                        <span id="up3" class="material-symbols-outlined">
+                    <!--shop-->
+                    <div id="shop" onclick="toggleMenu('tela-shop')">
+                        <span id="carr" class="material-symbols-outlined">
                             shopping_cart
+                            </span>
+                    </div>
+                    <!--upgrade-->
+                    <div id="upgrade" onclick="toggleMenu('tela-up')">
+                        <span id="upS" class="material-symbols-outlined">
+                            upgrade
                             </span>
                     </div>
 
                 </div>
 
+            </menu>
 
         </section>
+
+        <!--#endregion Upgrades-->
 
     </main>
     
     <script>
+        //#region script clicker
+
         // seleciona a imagem e o elemento moedas1
         const image = document.querySelector('#imagem');
         const countElement = document.querySelector('#moedas1-count');
@@ -167,9 +202,10 @@
             countElement.textContent = count;
             
         });
-    </script>
 
-    <script>
+        //#endregion script clicker
+
+        //#region script menu
 
 function toggleMenu(targetId) {
     // Select the main-screen and shop-screen sections
@@ -184,6 +220,8 @@ function toggleMenu(targetId) {
         }
     });
 }
+
+        //#endregion script menu
 
     </script>
 

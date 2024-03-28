@@ -101,13 +101,12 @@ div#cab > p {
 
 /* Menu */
 
-menu#mn1 {
+menu#mn {
     /*caixa*/
     position: relative;
 }
 
-
-menu#mn1 span#carr {
+menu#mn span#hm, span#hmS {
     /*caixa*/
     display: inline-block;
     /*fundo*/
@@ -117,10 +116,14 @@ menu#mn1 span#carr {
     /*fonte*/
     font-size: 2em;
     /*tamanho*/
-    width: 50%;
+    width: calc(100%/3);
 }
 
-menu#mn1  span#carr:hover {
+span#hmS {
+    background-color: #796849;
+}
+
+menu#mn span#hm:hover {
     /*fundo*/
     background-color: black;
     /*cor*/
@@ -129,25 +132,60 @@ menu#mn1  span#carr:hover {
     cursor: pointer;
 }
 
-menu#mn1 span#up {
+menu#mn span#carr, span#carrS {
     /*caixa*/
     display: inline-block;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: calc(100%/3);
+    left: calc(100%/3);
     /*fundo*/
-    background-color: #685a3f;
+    background-color: #aa9266;
     /*texto*/
     text-align: center;
     /*fonte*/
     font-size: 2em;
     /*tamanho*/
-    width: 50%;
+    width: calc(100%/3);
     /*transform*/
-    transform: translateY(-18px);
+    transform: translateY(-12px);
 }
 
-menu#mn1  span#up:hover {
+span#carrS {
+    background-color: #796849;
+}
+
+menu#mn span#carr:hover {
+    /*fundo*/
+    background-color: black;
+    /*cor*/
+    color: white;
+    /*cursor*/
+    cursor: pointer;
+}
+
+menu#mn span#up, span#upS {
+    /*caixa*/
+    display: inline-block;
+    position: absolute;
+    top: calc(100%/3);
+    left: calc(100%/3*2);
+    /*fundo*/
+    background-color: #aa9266;
+    /*texto*/
+    text-align: center;
+    /*fonte*/
+    font-size: 2em;
+    /*tamanho*/
+    width: calc(100%/3);
+    /*transform*/
+    transform: translateY(-12px);
+}
+
+span#upS {
+    background-color: #796849;
+}
+
+menu#mn span#up:hover {
     /*fundo*/
     background-color: black;
     /*cor*/
@@ -310,63 +348,6 @@ div#cab2 > p {
     padding-bottom: 10px;
 }
 
-/* Menu */
-
-menu#mn2 {
-    /*caixa*/
-    position: relative;
-}
-
-
-menu#mn2  span#carr2 {
-    /*caixa*/
-    display: inline-block;
-    /*fundo*/
-    background-color: #aa9266;
-    /*texto*/
-    text-align: center;
-    /*fonte*/
-    font-size: 2em;
-    /*tamanho*/
-    width: 50%;
-}
-
-menu#mn2  span#carr2:hover {
-    /*fundo*/
-    background-color: black;
-    /*cor*/
-    color: white;
-    /*cursor*/
-    cursor: pointer;
-}
-
-menu#mn2 span#up2 {
-    /*caixa*/
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /*fundo*/
-    background-color: #685a3f;
-    /*texto*/
-    text-align: center;
-    /*fonte*/
-    font-size: 2em;
-    /*tamanho*/
-    width: 50%;
-    /*transform*/
-    transform: translateY(-18px);
-}
-
-menu#mn2  span#up2:hover {
-    /*fundo*/
-    background-color: black;
-    /*cor*/
-    color: white;
-    /*cursor*/
-    cursor: pointer;
-}
-
 /* UPGRADES */
 
 section#tela-up {
@@ -415,61 +396,4 @@ div#cab3 > p {
     font-weight: bold;
     /*margem e preenchimento*/
     padding-bottom: 10px;
-}
-
-/* Menu */
-
-menu#mn3 {
-    /*caixa*/
-    position: relative;
-}
-
-
-menu#mn3  span#carr3 {
-    /*caixa*/
-    display: inline-block;
-    /*fundo*/
-    background-color: #aa9266;
-    /*texto*/
-    text-align: center;
-    /*fonte*/
-    font-size: 2em;
-    /*tamanho*/
-    width: 50%;
-}
-
-menu#mn3  span#carr3:hover {
-    /*fundo*/
-    background-color: black;
-    /*cor*/
-    color: white;
-    /*cursor*/
-    cursor: pointer;
-}
-
-menu#mn3 span#up3 {
-    /*caixa*/
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /*fundo*/
-    background-color: #685a3f;
-    /*texto*/
-    text-align: center;
-    /*fonte*/
-    font-size: 2em;
-    /*tamanho*/
-    width: 50%;
-    /*transform*/
-    transform: translateY(-18px);
-}
-
-menu#mn3  span#up3:hover {
-    /*fundo*/
-    background-color: black;
-    /*cor*/
-    color: white;
-    /*cursor*/
-    cursor: pointer;
 }
