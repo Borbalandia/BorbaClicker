@@ -31,7 +31,16 @@
 
 body , html {
     /*fundo*/
-    background-color: rgb(252, 114, 64);
+    background-image: url('../imagens/fazenda-abobora.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    /*sombra*/
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.459);
+    /*tamanho*/
+    width: 100vw;
+    height: 100vh;
 }
 
 h1 , p {
@@ -56,7 +65,7 @@ section#tela {
     left: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
     /*fundo*/
-    background-color: rgb(255, 214, 138);
+    background-color: rgba(255, 214, 138, 0.808);
     /*borda*/
     border-radius: 5px;
     /*tamanho*/
@@ -65,6 +74,7 @@ section#tela {
     /*trasformação*/
     transform: translate(-50% , -50%);
 }
+
 
 /* Div's */
 
@@ -76,6 +86,7 @@ div#cab {
     /*borda*/
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+
 }
 
 div#cab > h1 {
@@ -201,6 +212,8 @@ div > p {
     font-weight: bold;
 }
 
+
+
 /* Moedas 1 */
 
 div.icone-moeda1 {
@@ -251,6 +264,8 @@ div.icone-moeda2{
     transform: translateY(65px);
 }
 
+
+
 div.moedas2 {
     /*caixa*/
     display: block;
@@ -286,12 +301,45 @@ div#imagem {
     height: 256px;
     /*margem e preencimento*/
     margin-top: 80px;
+    transition: transform 0.1s ease-out;
 }
 
 div#imagem:hover {
     /*cursor do mouse*/
+    transform: scale(1.1);
     cursor: pointer;
+    /*animação*/
 }
+
+div#imagem:active {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Local */
+
+div#local {
+    /*fundo*/
+    background-image: url('../imagens/icone-abobora.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    /*tamanho*/
+    width: 90px;
+    height: 90px;
+    /*transform*/
+    transform: translate(20px , -15px);
+}
+
+div > p.localize {
+    /*fonte*/
+    font-family: Titulo;
+    font-weight: normal;
+    /*margem e preenchimento*/
+    margin-left: 32.5px;
+    /*transform*/
+    transform: translateY(-11px);
+}
+
 
 /* SHOP */
 
@@ -302,17 +350,17 @@ section#tela-shop {
     left: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
     /*fundo*/
-    background-color: rgb(255, 214, 138);
+    background-color: rgba(255, 214, 138, 0.808);
     /*borda*/
     border-radius: 5px;
     /*tamanho*/
     width: 90vw;
     height: 90vh;
-    /*trasformação*/
+    /*trasformacao*/
     transform: translate(-50% , -50%);
 }
 
-/*Cabeçalho*/
+/*Cabecaalho*/
 
 div#cab2 {
     /*fundo*/
@@ -343,6 +391,39 @@ div#cab2 > p {
     padding-bottom: 10px;
 }
 
+/* Compras */
+
+/* Sementes */
+
+div.compras {
+    /*fundo*/
+    background-color:  rgb(253, 234, 198);
+    /*tamanho*/
+    height: 80px;
+    /*borda*/
+    border: 2px solid rgb(54, 54, 54);
+    border-radius: 5px;
+    /*margem e preenchimento*/
+    margin: 0px 5px;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+div.compras p {
+    /*fonte*/
+    font-weight: bolder;
+    /*margem e preenchimento */
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+div.compras  p#dps {
+    /*fonte*/
+    font-size: 0.7em;
+    /*margem e preenchimento*/
+    padding-left: 15px;
+}
+
 /* UPGRADES */
 
 section#tela-up {
@@ -352,17 +433,17 @@ section#tela-up {
     left: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
     /*fundo*/
-    background-color: rgb(255, 214, 138);
+    background-color: rgba(255, 214, 138, 0.808);
     /*borda*/
     border-radius: 5px;
     /*tamanho*/
     width: 90vw;
     height: 90vh;
-    /*trasformação*/
+    /*trasformacao*/
     transform: translate(-50% , -50%);
 }
 
-/*Cabeçalho*/
+/*Cabecalho*/
 
 div#cab3 {
     /*fundo*/
