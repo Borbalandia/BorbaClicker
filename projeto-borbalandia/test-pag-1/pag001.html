@@ -54,45 +54,47 @@
 
             </menu>
 
-            <!--Icone-Moedas-->
+            
+                <!--Icone-Moedas-->
+                <div class="icone-moeda1">
+                
+                </div>
+                <!--Moedas-->
+                <div class="moedas1" id="moedas1-count">
+                    <p>0</p>
+                </div>
+                <!--Icone-Moedas-->
+                <div class="icone-moeda2">
+                
+                
+                </div>
+                <!--Moedas-->
+                <div class="moedas2">
+                
+                    <p>0</p>
+                </div>
+            
 
-            <div class="icone-moeda1">
+                <!--Imagem-->
+
+                <div id="imagem">
+
+            </div>
+
+            <!--local-->
+
+            <div id="local">
 
                 
 
             </div>
 
-            <!--Moedas-->
+            <div id="l">
 
-            <div class="moedas1" id="moedas1-count">
-
-                <p>0</p>
+                <p class="localize">FAZENDA</p>
 
             </div>
-
-            <!--Icone-Moedas-->
-
-            <div class="icone-moeda2">
-
-                
-                
-            </div>
-
-            <!--Moedas-->
-
-            <div class="moedas2">
-                
-                <p>0</p>
-
-            </div>
-
-            <!--Imagem-->
-
-            <div id="imagem">
-
-                
-
-            </div>
+            
 
         </section>
         
@@ -135,6 +137,19 @@
                 </div>
 
             </menu>
+
+            <!--Sementes-->
+
+            <div class="compras">
+
+                <div class="icone-description">
+
+                    <p>Sementes</p>
+                    <p id="dps">0.7 DPS</p>
+
+                </div>
+                    
+            </div>
 
         </section>
 
@@ -185,43 +200,50 @@
     </main>
     
     <script>
-        //#region script clicker
+    //#region script clicker
+    let apc = 1;
+    let aps = 0;
+    let aboboras = 0;
+    const image = document.querySelector('#imagem');
+    const countElement = document.querySelector('#moedas1-count');
 
-        // seleciona a imagem e o elemento moedas1
-        const image = document.querySelector('#imagem');
-        const countElement = document.querySelector('#moedas1-count');
+    function autoIncrement() {
+        aboboras += aps/100;
+        countElement.textContent = aboboras.toFixed(0);
+    }
+    setInterval(autoIncrement, 10);
+
+    // adiciona uum evento para os cliques na imagem
+    image.addEventListener('click', () => {
         let timeoutHandle;
         let podeclicar = true;
 
-        // adiciona uum evento para os cliques na imagem
-        image.addEventListener('click', () => {
-            // não dá pra clicar se podeclicar = false
-            if (!podeclicar) {
-                return;
-            }
-            if (timeoutHandle) {
-                clearTimeout(timeoutHandle); // reseta o timer se existir algum
-            }
+        if (!podeclicar) {
+            return;
+        }
+        if (timeoutHandle) {
+            clearTimeout(timeoutHandle);
+        }
 
-            // pega o valor de moedas1
-            let count = parseInt(countElement.textContent);
-            // aumenta o valor em 1
-            count++;
-    
-            // atualiza o valor
-            countElement.textContent = count;
-            
-            // Set up a delay to allow a 0.05-second window for another click event
-            podeclicar = false
-            timeoutHandle = setTimeout(() => {
-                podeclicar = true;
-                timeoutHandle = null; // reseta o timer
-            }, 50);
-        });
+        // pega o valor de moedas1
+        aboboras = parseInt(countElement.textContent);
+        // aumenta o valor em 1
+        aboboras += apc;
 
-        //#endregion script clicker
+        // atualiza o valor
+        countElement.textContent = aboboras.toFixed(0);
 
-        //#region script menu
+        // Set up a delay to allow a 0.05-second window for another click event
+        podeclicar = false;
+        timeoutHandle = setTimeout(() => {
+            podeclicar = true;
+            timeoutHandle = null;
+        }, 50);
+    });
+
+    //#endregion script clicker
+
+    //#region script menu
 
 function toggleMenu(targetId) {
     // seleciona a section da tela principal
@@ -238,6 +260,7 @@ function toggleMenu(targetId) {
 }
 
         //#endregion script menu
+        
 
     </script>
 
