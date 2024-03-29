@@ -9,6 +9,15 @@
     src: url('../fontes/Super\ Senior\ Personal\ Use.ttf') format('truetype');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/*Variaveis*/
+
+:root {
+    --fonte-titulo: 'Titulo' , sans-serif;
+    --font-texto: "Shantell Sans", cursive;
+}
+
 /* Global */
 
 * {
@@ -253,7 +262,7 @@ div.moedas1 {
 
 div.icone-moeda2{
     /*fundo*/
-    background-image: url('../favicon/icone-abobora.webp');
+    background-image: url('../imagens/icone-abobora-aps.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -281,6 +290,7 @@ div.moedas2 {
     padding-top: 8px;
     /*texto*/
     text-align: center;
+    font-weight: bold;
     /*borda*/
     border-radius: 8px;
 }
@@ -360,7 +370,7 @@ section#tela-shop {
     transform: translate(-50% , -50%);
 }
 
-/*Cabecaalho*/
+/*Cabecalho*/
 
 div#cab2 {
     /*fundo*/
@@ -399,7 +409,7 @@ div.compras {
     /*fundo*/
     background-color:  rgb(253, 234, 198);
     /*tamanho*/
-    height: 80px;
+    height: 70px;
     /*borda*/
     border: 2px solid rgb(54, 54, 54);
     border-radius: 5px;
@@ -409,9 +419,14 @@ div.compras {
     padding-top: 8px;
 }
 
+
 div.compras p {
     /*fonte*/
-    font-weight: bolder;
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.2em;
     /*margem e preenchimento */
     margin-bottom: 5px;
     margin-top: 2px;
@@ -422,6 +437,46 @@ div.compras  p#dps {
     font-size: 0.7em;
     /*margem e preenchimento*/
     padding-left: 15px;
+}
+
+div.icone-description {
+    /*caixa*/
+    display: block;
+    margin: right;
+    /*fundo*/
+    background-image: url('../imagens/sementes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*tamanho*/
+    width: 60px;
+    height: 60px;
+    /*transform*/
+    transform: translate(400px , -140px);
+}
+
+/* Botão de compra */
+
+div.botao-compra   {
+    /*caixa*/
+    display: inline-block;
+    /*fundo*/
+    background-color: #FFEA97;
+    /*transform*/
+    transform: translate(210px , -40px);
+}
+
+div.icone-compra {
+    /*fundo*/
+    background-image: url('../favicon/icone-abobora.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    /*tamanho*/
+    width: 50px;
+    height: 50px;
+    /*transform*/
+    transform: translate(-50px , -50px);
 }
 
 /* UPGRADES */

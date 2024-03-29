@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="estilos/celular.css">
     <!--Icones-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!---Script-->
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
     
@@ -69,8 +71,7 @@
                 
                 </div>
                 <!--Moedas-->
-                <div class="moedas2">
-                
+                <div class="moedas2" id="moedas2-count">
                     <p>0</p>
                 </div>
             
@@ -142,10 +143,27 @@
 
             <div class="compras">
 
-                <div class="icone-description">
+                <div >
 
                     <p>Sementes</p>
                     <p id="dps">0.7 DPS</p>
+
+                    <div class="botao-compra">
+
+                    <p>1.0</p>
+
+                    <div class="icone-compra">
+
+                        
+
+                    </div>
+
+                    </div>
+
+                    <div class="icone-description">
+
+
+                    </div>
 
                 </div>
                     
@@ -199,70 +217,5 @@
 
     </main>
     
-    <script>
-    //#region script clicker
-    let apc = 1;
-    let aps = 0;
-    let aboboras = 0;
-    const image = document.querySelector('#imagem');
-    const countElement = document.querySelector('#moedas1-count');
-
-    function autoIncrement() {
-        aboboras += aps/100;
-        countElement.textContent = aboboras.toFixed(0);
-    }
-    setInterval(autoIncrement, 10);
-
-    // adiciona uum evento para os cliques na imagem
-    image.addEventListener('click', () => {
-        let timeoutHandle;
-        let podeclicar = true;
-
-        if (!podeclicar) {
-            return;
-        }
-        if (timeoutHandle) {
-            clearTimeout(timeoutHandle);
-        }
-
-        // pega o valor de moedas1
-        aboboras = parseInt(countElement.textContent);
-        // aumenta o valor em 1
-        aboboras += apc;
-
-        // atualiza o valor
-        countElement.textContent = aboboras.toFixed(0);
-
-        // Set up a delay to allow a 0.05-second window for another click event
-        podeclicar = false;
-        timeoutHandle = setTimeout(() => {
-            podeclicar = true;
-            timeoutHandle = null;
-        }, 50);
-    });
-
-    //#endregion script clicker
-
-    //#region script menu
-
-function toggleMenu(targetId) {
-    // seleciona a section da tela principal
-    let mainScreen = document.querySelectorAll('.conteudo-tela');
-
-    // muda o display dos elementos
-    mainScreen.forEach((item) => {
-        if (item.id === targetId) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
-
-        //#endregion script menu
-        
-
-    </script>
-
 </body>
 </html>
