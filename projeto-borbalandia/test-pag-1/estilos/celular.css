@@ -367,7 +367,7 @@ section#tela-shop {
     border-radius: 5px;
     /*tamanho*/
     width: 90vw;
-    height: 90vh;
+    height: 95vh;
     /*trasformacao*/
     transform: translate(-50% , -50%);
 }
@@ -424,7 +424,7 @@ div.compras {
     /*borda*/
     border-radius: 5px;
     /*sombra*/
-    box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.452);
+    box-shadow:  0px 0px 3px rgba(0, 0, 0, 0.452);
     /*margem e preenchimento*/
     margin-top: 10px;
 } 
@@ -450,40 +450,86 @@ div.compras p#dps {
     padding-left: 15px;
 }
 
-div.icone-description-filho {
-    /*fundo*/
-    background-image: url('../imagens/sementes.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /*tamanho*/
-    width: 60px;
-    height: 60px;
-    
-}
 
 /* Botão de compra */
 
-div.botao-compra-filho   {
-    /*caixa*/
-    display: inline-block;
+div.icone-compra-filho   {
     /*fundo*/
-    background-color: #FFEA97;
+    background-image: url('../favicon/icone-abobora.webp');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*tamanho*/
+    width: 50px;
+    height: 50px;
+    /*trasform*/
+    transform: translate(80px , -5px);
     
 }
 
-div.icone-compra {
+div.p-filho {
     /*fundo*/
-    background-image: url('../favicon/icone-abobora.webp');
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-image: linear-gradient(rgb(253, 234, 198, .5) , rgb(252, 226, 179, .5)), url('../imagens/sementes-marrom.webp');
     background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     /*tamanho*/
-    width: 100px;
-    height: 100px;
-    
-    
+    height: 100%;
+    /*margem e preenchimento*/
+    margin-left: 20px;
 }
+
+div.p-filho p {
+    /*cor*/
+    color: black;
+}
+
+div.p-filho p#dps {
+    /*margem e preenchimento*/
+    margin-left: 15px;
+}
+
+div.botao-compra-filho {
+    /*fundo*/
+    background-color: white;
+    /*tamanho*/
+    width: 120px;
+    /*borda*/
+    border-radius: 8px;
+    /*sombra*/
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.438);
+}
+
+div.botao-compra-filho p {
+    /*texto*/
+    text-align: center;
+    /*font*/
+    font-size: 1.2em;
+    /*margem e preenchimento*/
+    padding-bottom: 5px;
+    margin-left: 70px;
+
+}
+
+div.botao-compra-filho:hover {
+    /*fundo*/
+    background-color: rgb(255, 225, 53);
+    /*cor*/
+    color: white;
+    /*cursor*/
+    cursor: pointer;
+    /*borda*/
+    border: 1px solid white; 
+}
+
+div.botao-compra-filho > p:hover {
+    /*cor*/
+    color: white;
+    /*font*/
+    font-size: 1.7em;
+}
+
+
 
 /* UPGRADES */
 
@@ -499,7 +545,7 @@ section#tela-up {
     border-radius: 5px;
     /*tamanho*/
     width: 90vw;
-    height: 90vh;
+    height: 95vh;
     /*trasformacao*/
     transform: translate(-50% , -50%);
 }
