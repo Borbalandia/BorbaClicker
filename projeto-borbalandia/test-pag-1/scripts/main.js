@@ -15,12 +15,12 @@
         } else return number.toFixed(0);
     }
 
-    function autoIncrement() {
+    /*function autoIncrement() {
         aboboras += aps/100;
         textoAbobora.textContent = formatNumber(aboboras);
         textoAps.textContent = formatNumber(aps);
     }
-    setInterval(autoIncrement, 10);
+    setInterval(autoIncrement, 10);*/
 
     // adiciona um evento para os cliques na imagem
     image.addEventListener('click', () => {
